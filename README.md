@@ -1,5 +1,9 @@
 # README
 
+## プロジェクト名を変更
+
+プロジェクトの全ファイルを`app_name`でグレップし、任意のプロジェクト名で置換してください。
+
 ## Docker起動
 
 ```bash
@@ -10,7 +14,7 @@ $ docker-compose up
 ## DB作成
 
 ```bash
-$ docker-compose run web rails db:create
+$ docker-compose exec app rails db:create
 ```
 
 ## Dockerfileやdocker-compose.ymlの変更を反映

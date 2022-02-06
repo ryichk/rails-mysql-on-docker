@@ -1,20 +1,14 @@
-# rubyイメージを取得
 FROM ruby:2.5.3
 
-# 必要パッケージのinstall
 RUN apt-get update -qq && \
     apt-get install -y build-essential \
                        libpq-dev \
                        nodejs \
                        mysql-client
 
-# 作業ディレクトリの作成と設定
-RUN mkdir /app_name
-ENV APP_ROOT /app_name
-WORKDIR $APP_ROOT
+WORKDIR /app
 
-ADD ./Gemfile $APP_ROOT/Gemfile
-ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
+COPY ./Gemfile /app/Gemfile
+COPY ./Gemfile.lock /app/Gemfile.lock
 
 RUN bundle install
-ADD . $APP_ROOT
