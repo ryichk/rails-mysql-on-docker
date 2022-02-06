@@ -4,6 +4,22 @@
 
 プロジェクトの全ファイルを`app_name`でグレップし、任意のプロジェクト名で置換してください。
 
+## .envファイル作成
+
+`.env.sample`をコピーして`.env`ファイルを作成してください。
+
+```bash
+$ cp .env.sample .env
+```
+
+.envファイルの下記環境変数の値を設定してください。
+
+- `MYSQL_DATABASE`
+
+- `MYSQL_ROOT_USER`
+
+- `MYSQL_ROOT_PASSWORD`
+
 ## Docker起動
 
 ```bash

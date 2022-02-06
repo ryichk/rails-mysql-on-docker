@@ -9,17 +9,16 @@ services:
       - "3000:3000"
     tty: true
     stdin_open: true
-    links:
+    depends_on:
       - db
 
   db:
     platform: linux/x86_64
-    image: mysql:5.7
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: root
+    image: mysql:8.0
     ports:
       - "3306:3306"
+    env_file:
+      - .env
     volumes:
       - mysql_data:/var/lib/mysql
 
