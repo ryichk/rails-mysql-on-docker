@@ -30,7 +30,13 @@ $ docker-compose up
 ## DB作成
 
 ```bash
-$ docker-compose exec app rails db:create
+$ docker-compose exec app bin/rails db:create
+```
+
+## Rspecの実行
+
+```bash
+$ docker-compose exec app bundle exec rspec
 ```
 
 ## Dockerfileやdocker-compose.ymlの変更を反映
