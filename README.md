@@ -33,6 +33,14 @@ $ docker-compose up
 $ docker-compose exec app bin/rails db:create
 ```
 
+## credentials.yml.encとmaster.kyの作成
+
+### ローカルPCにRuby3.1.0をインストール
+
+```bash
+$ EDITOR=vim bin/rails credentials:edit
+```
+
 ## Rspecの実行
 
 ```bash
